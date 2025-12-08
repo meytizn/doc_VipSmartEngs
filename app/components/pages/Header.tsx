@@ -11,7 +11,7 @@ const Header = () => {
 
 <Image
           className="w-[100px] "
-          src="/images/vedavski.png"   //it refers to public/
+          src="/images/vedavski.jpg"   //it refers to public/
           alt="Next.js logo"
           width={100}
           height={20}
