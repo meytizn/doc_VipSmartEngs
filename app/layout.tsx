@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local" //font 
+import Header from "./components/pages/Header";
 
 
 
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${vazirFont.className}`}
       >
+        <Header/>
         {children}
       </body>
     </html>
