@@ -31,23 +31,34 @@ const Products = () => {
     }
 
     return (
-        <div className='w-full flex-col md:w-[80%] m-auto flex md:flex-row flex-wrap mt-[100px] content-center gap-y-8'>
-            {data.map((product: ProductInterface) => (
-                <div className='flex flex-col text-[16px] text-center w-full md:w-[25%] gap-3' key={product.id}>
-                    <div className='text-black flex justify-center'>
-                        <img className="w-[180px] h-[165px]" src={product.image} alt={product.title} />
-                    </div>
-                    <h1 className='text-black'>{product.title}</h1>
-                    <div className='flex flex-row justify-center gap-6'>
-                        <h5 className='p-2 rounded-md font-extrabold text-green-800'>${product.price}</h5>
-                        <button className='btn border p-2 rounded-md font-bold cursor-pointer shadow'>
-                            Add
-                        </button>
-                    </div>
-                </div>
-            ))}
+    <div className=' w-full justify-evenly gap-2  md:w-[90%] m-auto flex flex-row md:flex-row flex-wrap pt-5 content-center gap-y-8'>
+    {data.map((product: ProductInterface) => (
+        <div className=' rounded-md 
+        shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
+        border-[#9c0000] p-5 flex flex-col w-[45%] md:w-[20%] text-[16px] text-center   gap-3' key={product.id}>
+
+
+            <div className='text-black flex justify-center'>
+                <img className="w-[180px] h-[165px]" src={product.image} alt={product.title} />
+            </div>
+            
+            <h1 className='text-black truncate w-full text-center'>{product.title}</h1>
+            
+            
+            
+            
+            <div className='w-full flex flex-row justify-around md:justify-between   content-center items-center  '>
+                <h5 className='p-2 rounded-md font-extrabold text-green-800'>${product.price}</h5>
+                <img onClick={() => alert('product choosed')} src="/icons/basketblack.png"
+                 className='w-[35px] cursor-pointer md:ml-13' />
+                
+                <img onClick={() => alert('fav choosed')} src="/icons/blackfav.png"
+                 className='w-[25px] cursor-pointer' />
+            </div>
         </div>
-    );
+    ))}
+</div>
+);
 };
 
 export default Products;
