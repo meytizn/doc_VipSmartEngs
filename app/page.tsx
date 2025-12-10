@@ -1,6 +1,10 @@
+import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Home() {
   return (
+    <>
     <div className={` w-full p-3 rouned-md border-5 border-[#D1011B] text-right flex flex-col justify-center `}>
         
         <h1>
@@ -30,6 +34,56 @@ export default function Home() {
 با توجه به همه چیزهایی که در این دنیا روی تلفن های هوشمند ما اتفاق می افتد، گاهی اوقات تمرکز روی یک کار تعیین شده دشوار است. حواس پرتی از رسانه های اجتماعی می تواند منجر به تمرکز و تعامل کمتر شود.
  </h1>
 
-    </div>
+
+
+  </div>
+
+
+
+
+
+<div className="text-lg bg-[#D1011B] text-black border-md  md:p-3 border-5 border-[#D1011B] text-right
+ flex flex-row flex-wrap md:flex-row justify-center gap-5 md:gap-0 md:justify-between content-end ">
+
+
+<Link className="justify-evenly border rounded-md bg-white p-3 flex flex-row items-center w-[45%] md:w-[30%]  content-between" href="products">
+
+<h1>محصولات</h1>
+
+<Image
+          className=""
+          src="/icons/product.png"   //it refers to public/
+          alt="Next.js logo"
+          width={150}
+          height={20}
+          priority
+          />
+</Link>
+
+
+<Link className="justify-evenly border rounded-md bg-white p-3 flex flex-row items-center w-[45%] md:w-[30%]  content-between" href="products">
+
+<h1>محصولات</h1>
+
+<Image
+          className=""
+          src="/icons/product.png"   //it refers to public/
+          alt="Next.js logo"
+          width={150}
+          height={20}
+          priority
+          />
+</Link>
+          </div>
+  
+
+
+
+
+
+
+
+
+</>
   );
 }
