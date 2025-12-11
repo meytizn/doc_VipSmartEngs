@@ -42,7 +42,7 @@ export default function Home() {
 
 
 
-<div className="text-lg bg-[#D1011B] text-black border-md  md:p-3 border-5 border-[#D1011B] text-right
+<div className=" mb-20 text-lg bg-[#D1011B] text-black border-md  md:p-3 border-5 border-[#D1011B] text-right
  flex flex-row flex-wrap md:flex-row justify-center gap-5 md:gap-0 md:justify-between content-end ">
 
 

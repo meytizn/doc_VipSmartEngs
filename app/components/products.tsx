@@ -5,19 +5,25 @@ import { AppDispatch, RootState } from '@/redux/store'; // Adjust the path accor
 import { useDispatch, useSelector } from 'react-redux';
 import { productFetch } from '@/redux/productSlice'; // Adjust the path accordingly
 import React, { useEffect } from 'react';
+import cartSlice from '@/redux/cartSlice';
 
-interface ProductInterface {
+
+export interface ProductInterface {
     id: number;
     title: string;
     price: string;
     image: string;
 }
 
-const Products = () => {
-    const dispatch = useDispatch<AppDispatch>(); // Specify the dispatch type
 
-    // Use the RootState type for the state in useSelector
+
+
+const Products = () => {
+    const dispatch = useDispatch<AppDispatch>(); 
     const { data, status } = useSelector((state: RootState) => state.products); 
+
+    const {addToCart} = cartSlice.actions
+
 
     useEffect(() => {
         dispatch(productFetch());
@@ -31,7 +37,12 @@ const Products = () => {
     }
 
     return (
-    <div className=' w-full justify-evenly gap-2  md:w-[90%] m-auto flex flex-row md:flex-row flex-wrap pt-5 content-center gap-y-8'>
+        <>
+
+
+
+
+    <div className=' w-full justify-evenly gap-2  md:w-[90%] m-auto flex flex-row md:flex-row flex-wrap pt-5 content-center gap-y-8 py-[120px]'>
     {data.map((product: ProductInterface) => (
         <div className=' rounded-md 
         shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
@@ -49,7 +60,7 @@ const Products = () => {
             
             <div className='w-full flex flex-row justify-around md:justify-between   content-center items-center  '>
                 <h5 className='p-2 rounded-md font-extrabold text-green-800'>${product.price}</h5>
-                <img onClick={() => alert('product choosed')} src="/icons/basketblack.png"
+                <img onClick={() => dispatch(addToCart(product))} src="/icons/basketblack.png"
                  className='w-[35px] cursor-pointer md:ml-13' />
                 
                 <img onClick={() => alert('fav choosed')} src="/icons/blackfav.png"
@@ -58,6 +69,7 @@ const Products = () => {
         </div>
     ))}
 </div>
+</>
 );
 };
 

@@ -1,10 +1,15 @@
+"use clinet"
 import React from 'react'
 import Image from "next/image";
+import Carts from '../Carts';
 
 
 const Header = () => {
   return (
-    <div className=' h-[100px] text-white bg-[#D1011B] w-full flex flex-row justify-between content-center items-center p-1 '>
+    <>
+    <div className='z-40
+        shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
+    h-[100px] text-white bg-[#D1011B] w-full flex flex-row justify-between content-center items-center p-1 '>
  
 
     
@@ -33,7 +38,10 @@ const Header = () => {
           </div>
 
     </div>
-  )
+
+      <Carts/>
+
+</>  )
 }
 
 export default Header
