@@ -46,7 +46,7 @@ const Carts = () => {
         onClick={()=>setshowbasket(!showbasket)} 
         className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
-        <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
+        <img src='/icons/user.png' className=' m-auto w-[40px]'/>
         <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
@@ -57,7 +57,7 @@ const Carts = () => {
         onClick={()=>setshowbasket(!showbasket)} 
         className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
-        <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
+        <img src='/icons/home.png' className=' m-auto w-[40px]'/>
         <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
@@ -65,7 +65,7 @@ const Carts = () => {
         onClick={()=>setshowbasket(!showbasket)} 
         className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
-        <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
+        <img src='/icons/redfav.png' className=' m-auto w-[40px]'/>
         <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
@@ -101,7 +101,7 @@ const Carts = () => {
      
 
     <div className='w-full md:w-[50%] flex flex-col justify-between bg-white 
-    overflow-y-auto max-h-[80vh]  
+    overflow-y-auto max-h-[70vh]  
         shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
     '>
 
