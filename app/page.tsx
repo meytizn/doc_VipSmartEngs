@@ -2,10 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 
+import variables from '../styles/variables.module.scss'
+
 export default function Home() {
   return (
     <>
-    <div className={` w-full p-3 rouned-md border-5 border-[#D1011B] text-right flex flex-col justify-center `}>
+    <div className={` ${variables.title}  w-full p-3 rouned-md border-5 border-[#d1011b] text-right flex flex-col justify-center `}>
+
+        <a href="https://bookama.ir">به نام خدا </a>
         
         <h1>
 مزایای آموزش آنلاین
@@ -33,7 +37,6 @@ export default function Home() {
 
 با توجه به همه چیزهایی که در این دنیا روی تلفن های هوشمند ما اتفاق می افتد، گاهی اوقات تمرکز روی یک کار تعیین شده دشوار است. حواس پرتی از رسانه های اجتماعی می تواند منجر به تمرکز و تعامل کمتر شود.
  </h1>
-
 
 
   </div>
