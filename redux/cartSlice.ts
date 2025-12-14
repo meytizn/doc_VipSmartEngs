@@ -1,21 +1,23 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // Define a type for the product in the cart
-interface CartProduct {
+export interface CartProductInterfaceSlice {
     id: number;
-    title: string; // Corrected the typo from 'titlle' to 'title'
+    title: string; 
+    price: number;
+    image: string;
     quantity: number;
 }
 
 // Define the initial state as an array of CartProduct
-const initialState: CartProduct[] = [];
+const initialState: CartProductInterfaceSlice[] = [];
 
 // Create the cart slice
 const cartSlice = createSlice({
     name: "carts",
     initialState,
     reducers: {
-        addToCart: (state, action: PayloadAction<CartProduct>) => {
+        addToCart: (state, action: PayloadAction<CartProductInterfaceSlice>) => {
             const oldProduct = state.find(product => product.id === action.payload.id);
 
             if (oldProduct) {

@@ -5,15 +5,9 @@ import { AppDispatch, RootState } from '@/redux/store'; // Adjust the path accor
 import { useDispatch, useSelector } from 'react-redux';
 import { productFetch } from '@/redux/productSlice'; // Adjust the path accordingly
 import React, { useEffect } from 'react';
-import cartSlice from '@/redux/cartSlice';
+import cartSlice, { CartProductInterfaceSlice } from '@/redux/cartSlice';
 
 
-export interface ProductInterface {
-    id: number;
-    title: string;
-    price: string;
-    image: string;
-}
 
 
 
@@ -43,7 +37,7 @@ const Products = () => {
 
 
     <div className=' w-full justify-evenly gap-2  md:w-[90%] m-auto flex flex-row md:flex-row flex-wrap pt-5 content-center gap-y-8 py-[120px]'>
-    {data.map((product: ProductInterface) => (
+    {data.map((product: CartProductInterfaceSlice) => (
         <div className=' rounded-md 
         shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
         border-[#9c0000] p-5 flex flex-col w-[45%] md:w-[20%] text-[16px] text-center   gap-3' key={product.id}>

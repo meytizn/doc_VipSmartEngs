@@ -1,9 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-import { ProductInterface } from './products'
 import { AppDispatch, RootState } from '@/redux/store'; // Adjust the path accordingly
 import { useDispatch, useSelector } from 'react-redux';
-import cartSlice from '@/redux/cartSlice';
+import cartSlice, { CartProductInterfaceSlice } from '@/redux/cartSlice';
 
 const Carts = () => {
     const carts = useSelector((state:RootState)=>state.carts)
@@ -83,7 +82,7 @@ const Carts = () => {
 
 
 
-        {carts.map((item:ProductInterface)=>(
+        {carts.map((item:CartProductInterfaceSlice)=>(
            <div className='p-4 flex flex-col content-center items-center md:flex-row ' key={item.id}>
             
 
