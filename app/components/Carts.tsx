@@ -54,7 +54,7 @@ const Carts = () => {
     
         <div className={`
             ${showbasket ? 'flex translate-y-0  inset-0  opacity-100 bottom-0  ' 
-                : ' translate-y-[-800px] ease-in-out '}
+                : 'hidden translate-y-[-1200px] ease-in-out '}
             
             fixed top-0 right-0 left-0 
             transition-transform duration-300 ease-in-out 
@@ -67,7 +67,10 @@ const Carts = () => {
         `}>
      
 
-    <div className='w-full md:w-[50%] flex flex-col justify-between bg-white   '>
+    <div className='w-full md:w-[50%] flex flex-col justify-between bg-white 
+    overflow-y-auto max-h-[78vh]  
+        shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]
+    '>
 
 
 
@@ -121,7 +124,7 @@ const Carts = () => {
 
 {/* side2 */}
 
-    <div className='flex flex-row justify-between   content-center items-center w-full md:w-[50%] bg-blue-500 p-1'>
+    <div className=' flex flex-row justify-between   content-center items-center w-full md:w-[50%] bg-green-500 p-3 gap-5'>
 
    <h1 className='pl-5'>total price : $ {totalCalculator()} </h1>
  <button  onClick={()=>{dispatch(clearCart()) , alert(" successfully done  ")}} className='w-[100px] btn border p-2 rounded-md font-bold cursor-pointer shadow '>pay</button>
