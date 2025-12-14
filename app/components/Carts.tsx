@@ -26,29 +26,39 @@ const Carts = () => {
 
 
 
-<div className='w-full flex flex-row justify-between bg-white 
+<div className='w-full flex md:flex-row justify-between bg-white 
  fixed bottom-0 z-100 h-[48px] text-black  border-x-1 
         shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.8)]   border-t-2 
 '>
 
 
-
-
  <button 
         onClick={()=>setshowbasket(!showbasket)} 
-        className=" z-100   w-[30%] h-[48px] border-r-1 border-l-1  bg-white"
+        className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
         <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
-        <h6 className='absolute top-0 px-6 py-2 text-green'>{carts.length}</h6>
+        <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
 
+      
  <button 
         onClick={()=>setshowbasket(!showbasket)} 
-        className=" z-100   w-[30%] h-[48px] border-r-1 border-l-1  bg-white "
+        className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
         <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
-        <h6 className='absolute top-0 px-6 py-2 text-green'>{carts.length}</h6>
+        <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
+      </button>
+
+
+
+      
+ <button 
+        onClick={()=>setshowbasket(!showbasket)} 
+        className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
+        >
+        <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
+        <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
  <button 
@@ -56,17 +66,7 @@ const Carts = () => {
         className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
         >
         <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
-        <h6 className='absolute top-0 px-6 py-2 text-green'>{carts.length}</h6>
-      </button>
-
-
-
- <button 
-        onClick={()=>setshowbasket(!showbasket)} 
-        className=" z-100   w-[30%] h-[48px]  border-r-1 border-l-1  bg-white "
-        >
-        <img src='/icons/basketblack.png' className=' m-auto w-[40px]'/>
-        <h6 className='absolute top-0 px-6 py-2 text-green'>{carts.length}</h6>
+        <h6 className='absolute top-0 px-3 py-1 text-green'>{carts.length}</h6>
       </button>
 
 
